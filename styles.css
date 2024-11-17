@@ -1,0 +1,205 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4;
+    background: #1e1e2f;
+    padding: 0 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header li {
+    margin: 0 10px;
+}
+
+header a {
+    color: #4faaff;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #2c2c3e;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #4faaff;
+}
+
+.projeto {
+    margin-bottom: 20px;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.projeto h3 {
+    color: #fff;
+}
+
+.projeto p {
+    color: #bbb;
+}
+
+.projeto a {
+    text-decoration: none;
+    color: #4faaff;
+}
+
+.projeto a:hover {
+    color: #fff;
+}
+
+/* Barra de carregamento */
+
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.navbar li a {
+    text-decoration: none;
+    line-height: 3;
+}
+
+.navbar a::after {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    content: " ";
+    width: 0%;
+    height: 0.1rem;
+    background-color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4faaff; /* Azul claro */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px; /* Diminui o padding para reduzir o tamanho */
+    font-size: 16px; /* Diminui o tamanho da fonte */
+    cursor: pointer;
+    display: none; /* Inicialmente oculto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#scrollToTop:hover {
+    background-color: #357a9f; /* Cor mais escura no hover */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+#scrollToTop:focus {
+    outline: none; /* Remove o contorno padrão ao clicar */
+}
+
+/* Quando passar o mouse sobre o menu */
+header ul li a:hover {
+    color: #fff; /* Cor do texto quando o mouse passa */
+}
+
+header ul li:hover ~ .hover-bar {
+    width: 100%; /* A barra se expande para 100% da largura do nav */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+    }
+
+    header li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+    }
+
+    header li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .projeto {
+        padding: 10px;
+    }
+}
